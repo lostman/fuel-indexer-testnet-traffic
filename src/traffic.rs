@@ -101,6 +101,11 @@ where
             .execute_and_commit(sealed_block)
             .await
             .expect("Should validate the block");
+
+        println!("Producer address: {}", producer.srv.bound_address);
+        loop {
+            tokio::time::sleep(std::time::Duration::from_secs(1)).await;
+        }
     }
 }
 
