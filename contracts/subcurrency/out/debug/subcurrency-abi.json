@@ -1,0 +1,161 @@
+{
+  "types": [
+    {
+      "typeId": 0,
+      "type": "()",
+      "components": [],
+      "typeParameters": null
+    },
+    {
+      "typeId": 1,
+      "type": "b256",
+      "components": null,
+      "typeParameters": null
+    },
+    {
+      "typeId": 2,
+      "type": "struct Address",
+      "components": [
+        {
+          "name": "value",
+          "type": 1,
+          "typeArguments": null
+        }
+      ],
+      "typeParameters": null
+    },
+    {
+      "typeId": 3,
+      "type": "struct Sent",
+      "components": [
+        {
+          "name": "from",
+          "type": 2,
+          "typeArguments": null
+        },
+        {
+          "name": "to",
+          "type": 2,
+          "typeArguments": null
+        },
+        {
+          "name": "amount",
+          "type": 4,
+          "typeArguments": null
+        }
+      ],
+      "typeParameters": null
+    },
+    {
+      "typeId": 4,
+      "type": "u64",
+      "components": null,
+      "typeParameters": null
+    }
+  ],
+  "functions": [
+    {
+      "inputs": [
+        {
+          "name": "address",
+          "type": 2,
+          "typeArguments": null
+        }
+      ],
+      "name": "balance",
+      "output": {
+        "name": "",
+        "type": 4,
+        "typeArguments": null
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "read"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "receiver",
+          "type": 2,
+          "typeArguments": null
+        },
+        {
+          "name": "amount",
+          "type": 4,
+          "typeArguments": null
+        }
+      ],
+      "name": "mint",
+      "output": {
+        "name": "",
+        "type": 0,
+        "typeArguments": null
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "read",
+            "write"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "receiver",
+          "type": 2,
+          "typeArguments": null
+        },
+        {
+          "name": "amount",
+          "type": 4,
+          "typeArguments": null
+        }
+      ],
+      "name": "send",
+      "output": {
+        "name": "",
+        "type": 0,
+        "typeArguments": null
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "read",
+            "write"
+          ]
+        }
+      ]
+    }
+  ],
+  "loggedTypes": [
+    {
+      "logId": 0,
+      "loggedType": {
+        "name": "",
+        "type": 3,
+        "typeArguments": []
+      }
+    }
+  ],
+  "messagesTypes": [],
+  "configurables": [
+    {
+      "name": "MINTER",
+      "configurableType": {
+        "name": "",
+        "type": 2,
+        "typeArguments": []
+      },
+      "offset": 8056
+    }
+  ]
+}

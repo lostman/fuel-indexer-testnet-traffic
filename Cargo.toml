@@ -1,0 +1,25 @@
+[package]
+name = "fuel-indexer-testnet-traffic"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+fuel-core = { path = "../fuel-core/crates/fuel-core" }
+fuel-core-types = { path = "../fuel-core/crates/types" }
+test-helpers = { path = "../fuel-core/tests/test-helpers" }
+itertools = "*"
+rand = "*"
+tokio = "1"
+tikv-jemallocator = "*"
+fuels = { version = "0.53", features = [ "fuel-core-lib", "std" ] }
+anyhow = "*"
+
+[[bin]]
+name = "traffic"
+path = "src/traffic.rs"
+
+[[bin]]
+name = "traffic_fuels"
+path = "src/traffic_fuels.rs"
